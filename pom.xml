@@ -11,8 +11,9 @@
 	<groupId>com.sabarno</groupId>
 	<artifactId>cards</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>cards</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Microservice for Cards</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -101,7 +102,18 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+						<groupId>com.google.cloud.tools</groupId>
+						<artifactId>jib-maven-plugin</artifactId>
+						<version>3.4.2</version>
+						<configuration>
+								<to>
+										<image>sabarnobiswas2002/${project.artifactId}:v0.0.1</image>
+								</to>
+						</configuration>
+				</plugin>
 		</plugins>
 	</build>
 
 </project>
+<!-- Docker image:  mvn compile jib:dockerBuild-->
