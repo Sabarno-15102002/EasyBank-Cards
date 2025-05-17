@@ -59,12 +59,12 @@ info:
   app:
     name: "cards"
     description: "Eazy Bank Cards Application"
-    version: "1.4.0"
+    version: "1.5.0"
 
 logging:
   level:
     com:
-      eazybytes:
+      sabarnobiswas2002:
         cards: DEBUG
   pattern:
     level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
